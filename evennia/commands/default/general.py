@@ -159,7 +159,7 @@ class CmdNick(MuxCommand):
                 if oldnick:
                     # clear the alias
                     string += "\nNick '%s' (= '%s') was cleared." % (nick, oldnick)
-                    caller.nicks.delete(nick, category=switch)
+                    caller.nicks.remove(nick, category=switch)
                 else:
                     string += "\nNo nick '%s' found, so it could not be removed." % nick
             else:
